@@ -4,12 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/View/Login.java</file>
-            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/View/Main.java</file>
-            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/Models/Usuario.java</file>
+            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/Controller/Helpers/LoginHelper.java</file>
+            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/Models/DAO/Banco.java</file>
             <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/View/MenuPrincipal.java</file>
             <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/Models/Cliente.java</file>
-            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/Models/Serviço.java</file>
-            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/View/Agenda.java</file>
+            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/Controller/MenuPrincipalController.java</file>
+            <file>file:/C:/Users/Programador%20Henrique/Documents/NetBeansProjects%20-%20GUSTAVO%20GUANABARA/babershop/src/Controller/LoginController.java</file>
         </group>
     </open-files>
 </project-private>
