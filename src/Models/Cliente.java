@@ -5,7 +5,6 @@
  */
 package Models;
 
-import java.util.Date;
 
 /**
  *
@@ -52,11 +51,16 @@ public class Cliente extends Pessoa {
     public void setCep(String cep) {
         this.cep = cep;
     }
+         //sobescrevendo o método 
+   @Override
+    public String toString() {
+        //por padrao o toString retorna o padrão, aqui estou mudando para trazer somente o nome do cliente e não a classe.
+        return getNome();
+}
+}
     
-    
-    
-    
-        
-        
-    }
+
+
+      
+
 

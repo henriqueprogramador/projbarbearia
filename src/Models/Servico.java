@@ -44,6 +44,10 @@ public class Servico {
     public void setId(int id) {
         this.id = id;
     }
-    
+     @Override
+    public String toString() {
+        //por padrao o toString retorna o padrão, aqui estou mudando para trazer somente o nome do cliente e não a classe.
+        return getDescricao();
+}
     
 }
