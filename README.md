@@ -1,13 +1,12 @@
 # projbarbearia
 
-Terminando a fase de desenvolvimento e implementação.
-projeto realizado em JAVA usando o método MVC.
+Neste projesto em Java foi utilizado o metodo MVC.
+Este software consiste em um sistema de barbearia completo, onde o profissional irá ter controle total aos agendamentos dos clientes, onde a cada agendamento o próprio sistema irá enviar um e-mail lembrete para o cliente o avisando do corte.
 
-<b>TELA LOGIN 
-![image](https://github.com/henriqueprogramador/projbarbearia/assets/22511796/6982837a-db38-45d3-af10-18aec6f7bbd2)
+### Abaixo as telas principais
 
-<b>TELA MENU
-![image](https://github.com/henriqueprogramador/projbarbearia/assets/22511796/f76b5cba-d98b-4d6c-97d1-1605f7ac70e5)
+![](https://github.com/henriqueprogramador/projbarbearia/assets/22511796/5214e3da-0fcf-49db-80ab-f0ca5bb67ccc)
+![](https://github.com/henriqueprogramador/projbarbearia/assets/22511796/6000e74f-5139-465f-82f7-9aa0de99d785)
+![](https://github.com/henriqueprogramador/projbarbearia/assets/22511796/27b73f54-71a3-4669-bfef-adbcc62dbaf7)
 
-<b>TELA AGENDA 
-![image](https://github.com/henriqueprogramador/projbarbearia/assets/22511796/385f27d5-4687-489f-878b-fd03fccf18e2)
+
