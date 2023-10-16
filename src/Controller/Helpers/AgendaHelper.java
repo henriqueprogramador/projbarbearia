@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Programador Henrique
  */
-public class AgendaHelper {
+public class AgendaHelper implements IHelper{
     
     private final Agenda view;
 
@@ -72,6 +72,48 @@ public class AgendaHelper {
             comboBoxModel.addElement(servico);
             
         }
+    }
+
+    
+
+    public void setarValor(float valor) {
+        view.getTextValor().setText(valor+""); //Neste campo estou convertendo uma string texto para um valor do tipo real.
+    }
+
+    public Cliente obterCliente() {
+        return (Cliente) view.getJcomboboxCliente().getSelectedItem();
+    }
+    
+    public Servico obterServico() {
+        return (Servico) view.getJcomboboxtServico().getSelectedItem();
+    }
+
+     // Aqui são todos os campos que o barbairo vai passar.
+    @Override
+    public Agendamento obterModelo() {   
+        String idString = view.getTextId().getText();
+        int id = Integer.parseInt(idString);
+        Cliente cliente = obterCliente();
+        Servico servico = obterServico();
+        String valorString = view.getTextValor().getText();
+        float valor = Float.parseFloat(valorString);
+        String data = view.getTextFormatedData().getText();
+        String hora = view.getTextFormatedHora().getText();
+        String dataHora = data + " " + hora;
+        String Observacao = view.getTextObservacao().getText();
+        
+        //criando agendamento
+        Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, Observacao);
+        return agendamento;
+        
+    }
+
+    @Override
+    public void limpatTela() {
+       view.getTextId().setText(""); // Setar para vazio
+       view.getTextFormatedData().setText("");
+       view.getTextFormatedHora().setText("");
+       view.getTextObservacao().setText("");
     }
     
       

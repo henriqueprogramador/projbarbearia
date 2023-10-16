@@ -59,4 +59,22 @@ public class AgendaController {
         ArrayList<Servico> servicos = servicoDAO.selectAll();
         helper.preencherServicos(servicos);
     }
+    
+    //Atualiza os valores do serviço na agenda
+    
+    public void atualizaValor(){
+        Servico servico = helper.obterServico();
+        helper.setarValor(servico.getValor()); //Aqui estou chamando o ajudante agenda pra setar o valor do item serviço.
+    }
+    
+    //criando função agendamento
+    public void agendar(){
+        //Buscando objeto Agendamento na tela
+        Agendamento agendamento = helper.obterModelo();
+        //Salvar objeto Agendamento no bd
+        new AgendamentoDAO().insert(agendamento);
+        //Inserir elemento na tabela.
+        atualizaTabela();
+        helper.limpatTela();
+    }
 }

@@ -7,7 +7,10 @@ package View;
 
 import Controller.AgendaController;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
@@ -106,6 +109,11 @@ public class Agenda extends javax.swing.JFrame {
         getContentPane().add(JcomboboxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
         JcomboboxtServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        JcomboboxtServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                JcomboboxtServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(JcomboboxtServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setText("0");
@@ -150,7 +158,7 @@ public class Agenda extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TableAgendamentos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 1120, 330));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 590, 1120, 330));
 
         LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
         getContentPane().add(LabelAgendaPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 1000));
@@ -166,12 +174,16 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_TextIdActionPerformed
 
     private void ButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgendarActionPerformed
-        // TODO add your handling code here:
+        this.controller.agendar();
     }//GEN-LAST:event_ButtonAgendarActionPerformed
 
     private void TextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextValorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextValorActionPerformed
+
+    private void JcomboboxtServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JcomboboxtServicoItemStateChanged
+        this.controller.atualizaValor(); //estou chamando o método, cada vez que trocar de item ele mudar o valor.
+    }//GEN-LAST:event_JcomboboxtServicoItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -236,6 +248,7 @@ public class Agenda extends javax.swing.JFrame {
         this.controller.atualizaTabela();
         this.controller.atualizaCliente();
         this.controller.atualizaServico();
+        
     }
 
     public JTable getTableAgendamentos() {
@@ -262,15 +275,51 @@ public class Agenda extends javax.swing.JFrame {
         this.JcomboboxtServico = JcomboboxtServico;
     }
 
-    public Object JComboboxCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public JTextField getTextValor() {
+        return TextValor;
     }
 
-    public Object getcomboboxServico() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setTextValor(JTextField TextValor) {
+        this.TextValor = TextValor;
     }
-    
-    
+
+    public JFormattedTextField getTextFormatedData() {
+        return TextFormatedData;
+    }
+
+    public void setTextFormatedData(JFormattedTextField TextFormatedData) {
+        this.TextFormatedData = TextFormatedData;
+    }
+
+    public JFormattedTextField getTextFormatedHora() {
+        return TextFormatedHora;
+    }
+
+    public void setTextFormatedHora(JFormattedTextField TextFormatedHora) {
+        this.TextFormatedHora = TextFormatedHora;
+    }
+
+    public JTextField getTextId() {
+        return TextId;
+    }
+
+    public void setTextId(JTextField TextId) {
+        this.TextId = TextId;
+    }
+
+    public JTextArea getTextObservacao() {
+        return TextObservacao;
+    }
+
+    public void setTextObservacao(JTextArea TextObservacao) {
+        this.TextObservacao = TextObservacao;
+    }
     
     
 }
+
+   
+    
+    
+    
+    

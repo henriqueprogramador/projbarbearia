@@ -12,7 +12,7 @@ import View.Login;
  *
  * @author Programador Henrique
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper{
     
     private final Login view;
 
@@ -44,6 +44,11 @@ public class LoginHelper {
     public void LimparTela(){
         view.getTextUsuario().setText("");
         view.getTextSenha().setText("");
+    }
+
+    @Override
+    public void limpatTela() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

@@ -38,6 +38,13 @@ public class Agendamento {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String Observacao){
+        this(id,cliente,servico,valor,data);
+        this.Observacao = Observacao;
+    }
+    
+    
     
     /* getter e setter */
 
